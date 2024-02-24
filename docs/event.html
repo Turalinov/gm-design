@@ -8,7 +8,11 @@
   <meta name="description" content="Description GM Design" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <link href="
+https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
+" rel="stylesheet">
+
   <link rel="stylesheet" href="css/main.min.css">
 
 
@@ -46,7 +50,7 @@
       <a href="index.html" class="menu__link">Home</a>
     </li>
     <li class="menu__item">
-      <a href="design.html" class="menu__link">G&M Design</a>
+      <a href="our-design.html" class="menu__link">G&M Design</a>
     </li>
     <li class="menu__item">
       <a href="our-gallery.html" class="menu__link">G&M Gallery</a>
@@ -65,7 +69,7 @@
       <section class="event">
 
   <!-- top -->
-  <div class="event__top">
+  <div class="event__top" style="background-image: url('img/event0.png');">
     <div class="container">
       <h1 class="event__title">
         David Yarrow
@@ -75,83 +79,94 @@
 
   <!-- .bottom  -->
   <div class="event__bottom">
-    <!-- control -->
-    <div class="event__control">
-      <!-- .event__link -->
-      <a href="events.html" class="event__link event__link-back">Back</a>
-      <!-- .event__date  -->
-      <span class="event__date">24-30 December 2023</span>
-      <!-- .event__link -->
-      <a href="#" class="event__link event__link-prev">Back</a>
-    </div>
-    <!-- desc  -->
-    <div class="event__desc">
-      David Yarrow's evocative and immersive photography of life on earth is most distinctive.
-    </div>
-    <!-- images   -->
-    <div class="event__pictures-wrap">
-      <ul class="event__pictures">
-        <!-- item -->
-        <li class="event__picture">
-          <img src="img/event_inner1.png" alt="" class="event__picture-img">
-        </li>
-        <!-- item -->
-        <li class="event__picture">
-          <img src="img/event_inner2.png" alt="" class="event__picture-img">
-        </li>
-        <!-- item -->
-        <li class="event__picture">
-          <img src="img/event_inner3.png" alt="" class="event__picture-img">
-        </li>
-        <!-- item -->
-        <li class="event__picture">
-          <img src="img/event_inner4.png" alt="" class="event__picture-img">
-        </li>
-        <!-- item -->
-        <li class="event__picture">
-          <img src="img/event_inner5.png" alt="" class="event__picture-img">
-        </li>
-        <!-- item -->
-        <li class="event__picture">
-          <img src="img/event_inner6.png" alt="" class="event__picture-img">
-        </li>
-        <!-- item -->
-        <li class="event__picture">
-          <img src="img/event_inner7.png" alt="" class="event__picture-img">
-        </li>
-      </ul>
-    </div>
-    <!-- info  -->
-    <div class="event__content-wrap">
-      <div class="event__content">
-        <div class="event__content-item">
-          <p>
-            Scottish photographer David Yarrow is a pioneer of fine art photography, known for visiting isolated
-            locations and
-            communities to capture the sublime beauty of the natural world.
-          </p>
-          <p>
-            His dramatic and highly evocative images, usually black and white, fuse the knowledgeable approach of David
-            Attenborough
-            with Ridley Scott’s visual drama and the exquisite composition of Ansel Adams.
-          </p>
+    <div class="container">
+      <!-- control -->
+      <div class="event__control">
+        <!-- .event__link -->
+        <a href="events.html" class="event__link event__link--back">Back</a>
+        <!-- .event__date  -->
+        <span class="event__date">24-30 December 2023</span>
+        <!-- .event__link -->
+        <a href="event.html" class="event__link event__link--prev">Previous</a>
+      </div>
+
+      <!-- icon -->
+      <div class="event__icon">
+      </div>
+      <!-- desc  -->
+      <div class="event__desc">
+        David Yarrow's evocative and immersive photography of life on earth is most distinctive.
+      </div>
+
+      <!-- images   -->
+      <div class="event__pictures-wrap">
+        <!-- основной контейнер -->
+        <div class="event__pictures-slider swiper">
+          <!-- крутящая обертка  -->
+          <ul class="event__pictures swiper-wrapper" id="event-pictures">
+            <!-- item -->
+            <li class="event__picture swiper-slide" data-src="img/big-event-picture.png">
+              <img src="img/event_inner1.png" alt="" class="event__picture-img">
+            </li>
+            <!-- item -->
+            <li class="event__picture swiper-slide" data-src="img/big-event-picture.png">
+              <img src="img/event_inner2.png" alt="" class="event__picture-img">
+            </li>
+            <!-- item -->
+            <li class="event__picture swiper-slide" data-src="img/big-event-picture.png">
+              <img src="img/event_inner3.png" alt="" class="event__picture-img">
+            </li>
+            <!-- item -->
+            <li class="event__picture swiper-slide" data-src="img/big-event-picture.png">
+              <img src="img/event_inner4.png" alt="" class="event__picture-img">
+            </li>
+            <!-- item -->
+            <li class="event__picture swiper-slide" data-src="img/big-event-picture.png">
+              <img src="img/event_inner5.png" alt="" class="event__picture-img">
+            </li>
+            <!-- item -->
+            <li class="event__picture swiper-slide" data-src="img/big-event-picture.png">
+              <img src="img/event_inner6.png" alt="" class="event__picture-img">
+            </li>
+            <!-- item -->
+            <li class="event__picture swiper-slide" data-src="img/big-event-picture.png">
+              <img src="img/event_inner7.png" alt="" class="event__picture-img">
+            </li>
+          </ul>
         </div>
-        <div class="event__content-item">
-          <p>
-            His photographs fetch high prices across international auction houses, making Yarrow one of the most coveted
-            photographers alive today.
-          </p>
-          <p>
-            He has equally shown an unchanging commitment to charitable causes and protecting wildlife through
-            fundraising
-            for
-            various NGOs and the British NHS.
-          </p>
+      </div>
+      <!-- info  -->
+      <div class="event__content-wrap">
+        <div class="event__content">
+          <div class="event__content-item">
+            <p>
+              Scottish photographer David Yarrow is a pioneer of fine art photography, known for visiting isolated
+              locations and
+              communities to capture the sublime beauty of the natural world.
+            </p>
+            <p>
+              His dramatic and highly evocative images, usually black and white, fuse the knowledgeable approach of
+              David
+              Attenborough
+              with Ridley Scott’s visual drama and the exquisite composition of Ansel Adams.
+            </p>
+          </div>
+          <div class="event__content-item">
+            <p>
+              His photographs fetch high prices across international auction houses, making Yarrow one of the most
+              coveted
+              photographers alive today.
+            </p>
+            <p>
+              He has equally shown an unchanging commitment to charitable causes and protecting wildlife through
+              fundraising
+              for
+              various NGOs and the British NHS.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-
-
   </div>
 
 </section>
@@ -235,6 +250,9 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js
+"></script>
 <script src="js/bundle.min.js"></script>
 </body>
 
