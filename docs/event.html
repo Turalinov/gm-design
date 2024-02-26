@@ -83,11 +83,11 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
       <!-- control -->
       <div class="event__control">
         <!-- .event__link -->
-        <a href="events.html" class="event__link event__link--back">Back</a>
+        <a href="events.html" class="event__link  navigation navigation--back">Back</a>
         <!-- .event__date  -->
         <span class="event__date">24-30 December 2023</span>
         <!-- .event__link -->
-        <a href="event.html" class="event__link event__link--prev">Previous</a>
+        <a href="event.html" class="event__link navigation navigation--prev">Previous</a>
       </div>
 
       <!-- icon -->
@@ -241,6 +241,43 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
             </div>
           </form>
         </div>
+      </div>
+    </div>
+  </div>
+  <!-- gallery order modal  -->
+  <div class="modal " id="modal-order">
+    <div class="modal__content">
+      <!-- inner  -->
+      <div class="modal__inner">
+
+        <!-- content  -->
+        <div class="modal__order order">
+          <!-- button -->
+          <button class="modal__close"> </button>
+          <!-- img -->
+          <div class="order__img">
+            <img src="img/order1.png" alt="Order picture" class="order__img-elem" id="js-order__img-elem">
+          </div>
+
+          <!-- .content -->
+          <div class="order__content">
+            <!-- left -->
+            <div class="order__info">
+              <div class="order__name" id="js-order__name">
+                Mariano Vivanco
+              </div>
+              <div class="order__price">
+                € <span id="js-order__price">3000</span>
+              </div>
+            </div>
+            <!-- center btn  -->
+            <button class="button order__btn">
+              Order
+            </button>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
