@@ -58,12 +58,12 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
     <li class="menu__item">
       <a href="our-events.html" class="menu__link">G&M Events</a>
     </li>
-    <li class="menu__item">
+    <!-- <li class="menu__item">
       <a href="lalique.html" class="menu__link">Lalique Maison</a>
     </li>
     <li class="menu__item">
       <a href="catalog.html" class="menu__link">Catalog</a>
-    </li>
+    </li> -->
   </ul>
 </div>
       <section class="design">
@@ -126,7 +126,7 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
           <!-- address  -->
           <div class="footer__address">
             <div class="footer__address-item">11 Avenue Princesse Grace 98000 Monaco</div>
-            <div class="footer__address-item">e-mail: <a href="mailto:office@gmail.com">office@gmail.com</a></div>
+            <div class="footer__address-item">e-mail: <a href="mailto:office@gmdesign.pro">office@gmdesign.pro</a></div>
             <div class="footer__address-item">tel: <a href="tel:+377640617737">+377 6 40 61 77 37</a></div>
           </div>
         </div>
@@ -138,8 +138,16 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
       </div>
       <div class="footer__elem">
         <div class="footer__copyright">
-          <a href="https://www.behance.net/Lizart" class="footer__copyright-link" target="_blank">Design by Ilia
-            Liukish</a>
+
+          <div class="footer__copyright-item">
+            Design by <a href="https://www.behance.net/Lizart" class="footer__copyright-link" target="_blank">Ilia
+              Liukish</a>
+          </div>
+
+          <div class="footer__copyright-item">
+            Development by <a href="https://incrona.com/" class="footer__copyright-link" target="_blank">Incrona</a>
+          </div>
+
         </div>
       </div>
 
@@ -164,13 +172,19 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
           <form action="#" class="form__elem">
             <div class="form__inner">
               <div class="form__row">
-                <input type="text" class="form__input" name="username" placeholder="My name">
+                <input type="hidden" name="formtype" value="Subscribe">
+                <input type="text" class="form__input js-required" name="username" placeholder="Name">
               </div>
               <div class="form__row">
-                <input type="text" class="form__input" name="username" placeholder="Yourmail@gmail.com">
+                <input type="text" class="form__input js-required" name="email" placeholder="Yourmail@gmail.com">
               </div>
               <div class="form__row">
-                <button class="form__btn">JOIN</button>
+                <div class="form__error">
+                  The <span></span> field is not filled in or incorrectly filled in.
+                </div>
+              </div>
+              <div class="form__row">
+                <button class="form__btn" disabled>JOIN</button>
               </div>
             </div>
           </form>
@@ -178,6 +192,8 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
       </div>
     </div>
   </div>
+
+
   <!-- gallery order modal  -->
   <div class="modal " id="modal-order">
     <div class="modal__content">
@@ -205,7 +221,7 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
               </div>
             </div>
             <!-- center btn  -->
-            <button class="button order__btn">
+            <button class="button order__btn" id="js-order-btn">
               Order
             </button>
 
@@ -215,6 +231,88 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
       </div>
     </div>
   </div>
+
+
+  <!-- gallery order form modal  -->
+  <div class="modal" id="modal-order-form">
+    <!-- белая область -->
+    <div class="modal__content">
+      <!-- button close -->
+      <button class="modal__close"></button>
+      <!-- inner  -->
+      <div class="modal__inner">
+        <!-- content  -->
+        <div class="modal__title">
+          Please enter your email and phone number to contact with you
+        </div>
+        <!-- form  -->
+        <div class="modal__form form">
+          <form action="#" class="form__elem">
+            <div class="form__inner">
+              <div class="form__row">
+                <input type="hidden" name="formtype" value="Order">
+                <input type="hidden" class="js-order-hidden" name="order" value="Mark Evans - 3000">
+                <input type="text" class="form__input js-required" name="username" placeholder="Name">
+              </div>
+              <div class="form__row">
+                <input type="text" class="form__input js-required" name="phone" placeholder="Phone number">
+              </div>
+              <div class="form__row">
+                <input type="text" class="form__input js-required" name="email" placeholder="Mail">
+              </div>
+              <div class="form__row">
+                <textarea name="comment" class="form__textarea" placeholder="Comment"></textarea>
+              </div>
+              <div class="form__row">
+                <div class="form__error">The <span></span> field is not filled in or incorrectly filled in.
+                </div>
+              </div>
+              <div class="form__row">
+                <button class="form__btn" disabled>Sender order</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- sucess order modal  -->
+  <div class="modal" id="modal-order-success">
+    <!-- белая область -->
+    <div class="modal__content">
+      <!-- inner  -->
+      <div class="modal__inner">
+        <div class="modal__status">
+          <div class="modal__status-title">
+            Уour order has been sent to us, please wait for a response. Thank you.
+          </div>
+          <button class="modal__status-btn">
+            OKAY
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- error order modal  -->
+  <div class="modal " id="modal-order-error">
+    <!-- белая область -->
+    <div class="modal__content">
+      <!-- inner  -->
+      <div class="modal__inner">
+        <div class="modal__status">
+          <div class="modal__status-title">
+            Something went wrong on our end. Please try submitting again or send us an email to office@gmdesign.pro
+          </div>
+          <button class="modal__status-btn">
+            OKAY
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end -->
 
 </div>
 
