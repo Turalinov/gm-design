@@ -31,7 +31,7 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
   <div class="wrapper">
     <div class="wrapper__content">
 
-      <div class="header @@clazz">
+      <div class="header @@clazz lock-padding">
   <div class="header__logo logo">
     <a class="logo__link" href="index.html">
       <img src="img/logo.svg" alt="" class="logo__img">
@@ -141,7 +141,7 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
   <div class="footer">
   <div class="container">
 
-    <div class="footer__letter call-modal-newsletter">
+    <div class="footer__letter call-modal-newsletter modal-link" data-modal="modal-newsletter">
       Join our newsletter
     </div>
 
@@ -324,6 +324,25 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
     </div>
   </div>
 
+  <!-- sucess order modal  -->
+  <div class="modal " id="modal-subscribe-success">
+    <!-- белая область -->
+    <div class="modal__content">
+      <!-- inner  -->
+      <div class="modal__inner">
+        <div class="modal__status">
+          <div class="modal__status-title">
+            You have subscribed to the newsletter. Thank you for subscribing.
+          </div>
+          <button class="modal__status-btn">
+            OKAY
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- error order modal  -->
   <div class="modal " id="modal-order-error">
     <!-- белая область -->
@@ -333,6 +352,24 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
         <div class="modal__status">
           <div class="modal__status-title">
             Something went wrong on our end. Please try submitting again or send us an email to office@gmdesign.pro
+          </div>
+          <button class="modal__status-btn">
+            OKAY
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end -->
+  <!-- error order modal  -->
+  <div class="modal" id="modal-subscribe-error">
+    <!-- белая область -->
+    <div class="modal__content">
+      <!-- inner  -->
+      <div class="modal__inner">
+        <div class="modal__status">
+          <div class="modal__status-title">
+            Something went wrong on our end. Try again or send us an email to office@gmdesign.pro
           </div>
           <button class="modal__status-btn">
             OKAY
