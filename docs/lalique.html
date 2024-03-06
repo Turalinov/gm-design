@@ -78,14 +78,14 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
     <div class="lalique__list-wrap">
       <div class="lalique__list">
         <!-- item  1 -->
-        <div class="lalique__item">
+        <div class="lalique__item" id="btn-modal-restourant">
           <div class="lalique__img">
             <img src="img/lalique1.png" alt="" class="lalique__img-elem">
           </div>
           <span>Restaurants</span>
         </div>
         <!-- item  2 -->
-        <div class="lalique__item">
+        <div class="lalique__item" id="btn-modal-hotels">
           <div class="lalique__img">
             <img src="img/lalique2.png" alt="" class="lalique__img-elem">
           </div>
@@ -204,6 +204,111 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
 
 
   </div>
+  <!-- hotels  -->
+  <div class="modal" id="modal-restourant">
+    <!-- белая область -->
+    <div class="modal__content">
+      <!-- button close  -->
+      <button class="modal__close"></button>
+      <!-- inner  -->
+      <div class="modal__inner">
+        <!-- обертка на slider  -->
+        <div class="lalique-hotels__slider">
+          <!-- основной контейнер -->
+          <div class="lalique-hotels-swiper swiper">
+            <!-- крутящая обертка  -->
+            <ul class="lalique-hotels__pictures swiper-wrapper">
+              <!-- item -->
+              <li class="lalique-hotels__picture swiper-slide">
+                <img src="img/lalique-hotel.png" alt="" class="lalique-hotels__picture-img">
+              </li>
+              <!-- item -->
+              <li class="lalique-hotels__picture swiper-slide">
+                <img src="img/lalique-hotel.png" alt="" class="lalique-hotels__picture-img">
+              </li>
+              <!-- item -->
+              <li class="lalique-hotels__picture swiper-slide">
+                <img src="img/lalique-hotel.png" alt="" class="lalique-hotels__picture-img">
+              </li>
+            </ul>
+          </div>
+
+
+          <!-- блок со стрелкой и пагинацией -->
+
+          <div class="lalique-hotels__slider-control">
+            <!-- buttons  -->
+            <div class="lalique-hotels__slider-btns">
+              <button class="lalique-hotels__slider-btn lalique-hotels__slider-btn--prev"></button>
+              <button class="lalique-hotels__slider-btn lalique-hotels__slider-btn--next"></button>
+            </div>
+
+            <!-- фракция  -->
+            <div class="lalique-hotels__slider-fraction">
+              <span class="lalique-hotels__slider-fraction-inner lalique-hotels__slider-fraction-inner-1"></span> <span
+                class="lalique-hotels__slider-fraction-text">The Villa Rene Lalique Restaurant</span>
+            </div>
+          </div>
+
+        </div>
+        <!-- slider wrap end  -->
+      </div>
+    </div>
+  </div>
+
+  <!-- hotels  -->
+  <div class="modal" id="modal-hotels">
+    <!-- белая область -->
+    <div class="modal__content">
+      <!-- button close  -->
+      <button class="modal__close"></button>
+      <!-- inner  -->
+      <div class="modal__inner">
+        <!-- обертка на slider  -->
+        <div class="lalique-hotels__slider">
+          <!-- основной контейнер -->
+          <div class="lalique-hotels-swiper swiper">
+            <!-- крутящая обертка  -->
+            <ul class="lalique-hotels__pictures swiper-wrapper">
+              <!-- item -->
+              <li class="lalique-hotels__picture swiper-slide">
+                <img src="img/lalique-hotel.png" alt="" class="lalique-hotels__picture-img">
+              </li>
+              <!-- item -->
+              <li class="lalique-hotels__picture swiper-slide">
+                <img src="img/lalique-hotel.png" alt="" class="lalique-hotels__picture-img">
+              </li>
+              <!-- item -->
+              <li class="lalique-hotels__picture swiper-slide">
+                <img src="img/lalique-hotel.png" alt="" class="lalique-hotels__picture-img">
+              </li>
+            </ul>
+          </div>
+
+
+          <!-- блок со стрелкой и пагинацией -->
+
+          <div class="lalique-hotels__slider-control">
+            <!-- buttons  -->
+            <div class="lalique-hotels__slider-btns">
+              <button class="lalique-hotels__slider-btn lalique-hotels__slider-btn--prev"></button>
+              <button class="lalique-hotels__slider-btn lalique-hotels__slider-btn--next"></button>
+            </div>
+
+            <!-- фракция  -->
+            <div class="lalique-hotels__slider-fraction">
+              <span class="lalique-hotels__slider-fraction-inner lalique-hotels__slider-fraction-inner-2"></span> <span
+                class="lalique-hotels__slider-fraction-text">The Villa Rene Lalique Hotel</span>
+            </div>
+          </div>
+
+        </div>
+        <!-- slider wrap end  -->
+      </div>
+    </div>
+  </div>
+
+
 
   <!-- join our newsletter modal  -->
   <div class="modal " id="modal-newsletter">
