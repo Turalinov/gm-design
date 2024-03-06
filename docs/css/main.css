@@ -406,9 +406,14 @@ h6 {
 
 h1 {
   font-family: "ObjectSans", sans-serif;
-  font-weight: 600;
-  font-size: 58px;
+  font-weight: 800;
+  font-size: 54px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1366px) {
+  h1 {
+    font-size: 44px;
+  }
 }
 @media screen and (max-width: 576px) {
   h1 {
@@ -439,6 +444,15 @@ button {
   visibility: hidden;
   height: 0;
   width: 0;
+}
+
+.lg-object.lg-image {
+  border: 1px solid #E0E0E0;
+}
+@media screen and (max-width: 576px) {
+  .lg-object.lg-image {
+    border: none;
+  }
 }
 
 .container {
@@ -488,6 +502,11 @@ button {
   text-align: center;
   transition: 0.3s;
 }
+@media screen and (max-width: 1366px) {
+  .btn {
+    font-size: 20px;
+  }
+}
 .btn:hover {
   border-color: var(--clr-black);
   background-color: var(--clr-white);
@@ -514,6 +533,11 @@ button {
   color: var(--clr-white);
   width: 110px;
   cursor: pointer;
+}
+@media screen and (max-width: 1366px) {
+  .custom-select-wrap {
+    font-size: 22px;
+  }
 }
 
 .custom-select-value {
@@ -604,6 +628,7 @@ button {
   left: 134px;
   bottom: 105px;
   font-size: 90px;
+  letter-spacing: -1.8px;
 }
 @media screen and (max-width: 1800px) {
   .design__title {
@@ -633,14 +658,14 @@ button {
 }
 @media screen and (max-width: 992px) {
   .design__title {
-    font-size: 50px;
+    font-size: 40px;
+    letter-spacing: -0.8px;
     left: 0;
     bottom: 50px;
   }
 }
 @media screen and (max-width: 576px) {
   .design__title {
-    font-size: 40px;
     bottom: 24px;
   }
 }
@@ -691,9 +716,9 @@ button {
     margin-bottom: 60px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1366px) {
   .design__desc {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -880,7 +905,7 @@ button {
   text-align: center;
   text-transform: uppercase;
   margin: 0 auto 104px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 @media screen and (max-width: 1400px) {
   .event__desc {
@@ -895,6 +920,7 @@ button {
 }
 @media screen and (max-width: 576px) {
   .event__desc {
+    line-height: 1.1;
     font-size: 28px;
   }
 }
@@ -905,7 +931,7 @@ button {
 }
 @media screen and (max-width: 992px) {
   .event__pictures-wrap {
-    margin-bottom: 84px;
+    margin-bottom: 64px;
   }
 }
 
@@ -953,6 +979,7 @@ button {
   width: calc(50% - 34px);
   margin-left: 34px;
   font-size: 22px;
+  line-height: 1.3;
 }
 @media screen and (max-width: 992px) {
   .event__content-item {
@@ -964,6 +991,7 @@ button {
 @media screen and (max-width: 576px) {
   .event__content-item {
     font-size: 18px;
+    line-height: 1.4;
   }
 }
 
@@ -1006,11 +1034,18 @@ button {
   display: flex;
   margin-top: -60px;
   margin-bottom: 94px;
+  z-index: 5;
+  position: relative;
 }
 @media screen and (max-width: 1280px) {
   .events__btns {
     margin-top: initial;
     margin-bottom: 78px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .events__btns {
+    margin-bottom: 50px;
   }
 }
 
@@ -1020,6 +1055,11 @@ button {
   padding: 14px 22px 15px 22px;
   background-color: var(--clr-black);
   color: var(--clr-white);
+}
+@media screen and (max-width: 1366px) {
+  .events__btn {
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 350px) {
   .events__btn {
@@ -1080,9 +1120,9 @@ button {
   font-size: 34px;
   margin-bottom: 32px;
 }
-@media screen and (max-width: 1850px) {
+@media screen and (max-width: 1366px) {
   .events__item-date {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 22px;
   }
 }
@@ -1107,6 +1147,7 @@ button {
 
 .events__item-title {
   font-size: 76px;
+  line-height: 1.2;
 }
 @media screen and (max-width: 1850px) {
   .events__item-title {
@@ -1593,7 +1634,7 @@ button {
 }
 
 .header {
-  padding: 12px 0;
+  padding: 17px 0;
   position: fixed;
   width: 100%;
   display: flex;
@@ -1622,6 +1663,12 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 1366px) {
+  .header {
+    min-height: 72px;
+    padding: 12px 0;
+  }
+}
 @media screen and (max-width: 576px) {
   .header {
     min-height: 70px;
@@ -1642,6 +1689,13 @@ button {
   background-color: var(--clr-black);
   z-index: 2;
   transition: 0.8s;
+  cursor: pointer;
+}
+@media screen and (max-width: 1366px) {
+  .header__toggle-wrap {
+    width: 72px;
+    height: 72px;
+  }
 }
 @media screen and (max-width: 576px) {
   .header__toggle-wrap {
@@ -1656,11 +1710,17 @@ button {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 63px;
+  width: 64px;
   height: 22px;
   color: var(--clr-white);
   font-size: 0;
   transition: 0.5s;
+}
+@media screen and (max-width: 1366px) {
+  .header__toggle {
+    width: 40px;
+    height: 22px;
+  }
 }
 @media screen and (max-width: 576px) {
   .header__toggle {
@@ -1734,46 +1794,34 @@ button {
 
 .hero {
   height: 100vh;
-  background-image: url("../img/our-gallery2-upd.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
 }
-@media screen and (max-width: 576px) {
-  .hero {
-    height: 684px;
-    background-image: url("../img/home-hero-bg@mob.png");
-  }
-}
-.hero--events {
-  background-image: url("../img/events-hero-bg.png");
-}
-@media screen and (max-width: 576px) {
-  .hero--events {
-    background-image: url("../img/events-hero-bg@mob.png");
-  }
-}
-.hero--gallery {
-  position: relative;
-  background-image: url("../img/gallery-hero-bg-upd.png");
-}
-.hero--gallery::before {
+.hero::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2); /* Используйте rgba для установки прозрачности (0.5 здесь это 50%) */
-  z-index: 0; /* Убедитесь, что подложка находится выше изображения */
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
+@media screen and (max-width: 576px) {
+  .hero {
+    height: 684px;
+  }
+}
+
 .hero__list {
   position: absolute;
   bottom: 72px;
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 .hero__item.active .hero__link {
@@ -1784,16 +1832,17 @@ button {
   font-size: 92px;
   color: var(--clr-white);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  letter-spacing: -1.84px;
   line-height: 1;
   transition: 0.3s;
 }
 .hero__link:hover {
   color: var(--clr-active);
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1366px) {
   .hero__link {
     font-size: 72px;
+    letter-spacing: -1.44px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1826,6 +1875,11 @@ button {
 .lalique {
   padding: 230px 0 0;
 }
+@media screen and (max-width: 1366px) {
+  .lalique {
+    padding: 100px 0 0;
+  }
+}
 @media screen and (max-width: 576px) {
   .lalique {
     padding: 138px 0 0;
@@ -1850,6 +1904,12 @@ button {
   text-align: center;
   margin: 0 auto 86px;
   max-width: 1142px;
+}
+@media screen and (max-width: 1366px) {
+  .lalique__desc {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
 }
 @media screen and (max-width: 576px) {
   .lalique__desc {
@@ -1947,15 +2007,39 @@ button {
 
 .lalique__subtitle {
   font-family: "ObjectSans", sans-serif;
-  font-weight: 600;
-  font-size: 58px;
+  font-weight: 800;
+  font-size: 54px;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 56px;
 }
+@media screen and (max-width: 1366px) {
+  .lalique__subtitle {
+    font-size: 44px;
+  }
+}
 @media screen and (max-width: 576px) {
   .lalique__subtitle {
     font-size: 24px;
+  }
+}
+
+.lalique__slider {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+@media screen and (max-width: 992px) {
+  .lalique__slider-control {
+    display: flex;
+    margin-top: 12px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .lalique__slider-btns {
+    display: none;
   }
 }
 
@@ -1965,44 +2049,61 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 .lalique__slider-btn--prev {
   background-image: url("../img/arrow-btn-prev.svg");
+  left: 70px;
 }
 
 .lalique__slider-btn--next {
   background-image: url("../img/arrow-btn-next.svg");
+  right: 70px;
 }
 
-.lalique__slider-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
+.lalique__slider-fraction {
+  width: initial;
+  font-size: 22px;
+  display: inline-block;
+  font-size: 22px;
+  padding: 14px 18px 14px 18px;
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  border-radius: 37px;
+  position: absolute;
+  z-index: 1;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 @media screen and (max-width: 992px) {
-  .lalique__slider-pagination {
-    opacity: 1;
-    visibility: visible;
+  .lalique__slider-fraction {
+    position: static;
+    font-size: 14px;
+    padding: 0;
+    background-color: transparent;
+    color: var(--clr-white);
+    bottom: 10px;
+    border-radius: 0;
+    transform: initial;
+    text-align: center;
+    margin: 0 auto;
   }
-}
-
-.lalique__slider-pagination .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  background-color: #4D4D4D;
-  margin: 0 7px !important;
-}
-
-.lalique__slider-pagination .swiper-pagination-bullet-active {
-  background-color: var(--clr-white);
 }
 
 .logo {
   width: 98px;
   height: 62px;
+}
+@media screen and (max-width: 1366px) {
+  .logo {
+    width: 78px;
+    height: 48px;
+  }
 }
 @media screen and (max-width: 576px) {
   .logo {
@@ -2233,8 +2334,8 @@ button {
 #modal-subscribe-success .modal__status-title,
 #modal-subscribe-error .modal__status-title {
   font-family: "ObjectSans", sans-serif;
-  font-weight: 600;
-  height: 1.11;
+  font-weight: 800;
+  line-height: 1.11;
   font-size: 36px;
   text-align: center;
   margin-bottom: 53px;
@@ -2439,6 +2540,11 @@ button {
 .our-design {
   padding: 230px 0 40px;
 }
+@media screen and (max-width: 1366px) {
+  .our-design {
+    padding: 100px 0 46px;
+  }
+}
 @media screen and (max-width: 576px) {
   .our-design {
     padding: 138px 0 28px;
@@ -2448,6 +2554,11 @@ button {
 .our-design__title {
   text-align: center;
   margin-bottom: 24px;
+}
+@media screen and (max-width: 1366px) {
+  .our-design__title {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (max-width: 576px) {
   .our-design__title {
@@ -2464,10 +2575,11 @@ button {
   max-width: 730px;
   margin: 0 auto 125px;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1366px) {
   .our-design__desc {
     font-size: 28px;
-    margin-bottom: 65px;
+    margin-bottom: 50px;
+    max-width: 590px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -2500,7 +2612,37 @@ button {
   margin-left: 16px;
   margin-top: 16px;
   position: relative;
-  transform: 0.2s;
+  transition: 0.5s;
+}
+.our-design__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Используйте rgba для установки прозрачности (0.5 здесь это 50%) */
+  z-index: 1; /* Убедитесь, что подложка находится выше изображения */
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.our-design__item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 22px;
+  background-image: url("../img/eye.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2; /* Убедитесь, что подложка находится выше изображения */
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 @media screen and (max-width: 1280px) {
   .our-design__item {
@@ -2511,6 +2653,10 @@ button {
   .our-design__item {
     width: calc(100% - 16px);
   }
+}
+.our-design__item:hover::before, .our-design__item:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 .our-design__item:hover .our-design__item__title {
   opacity: 1;
@@ -2534,17 +2680,26 @@ button {
   visibility: hidden;
   text-transform: capitalize;
   transition: 0.5s;
+  z-index: 2;
+  letter-spacing: -0.2px;
 }
 @media screen and (max-width: 992px) {
   .our-design__item__title {
     opacity: 1;
     visibility: visible;
+    font-size: 16px;
+    letter-spacing: -0.16px;
   }
 }
 
 .our-events {
   background-color: var(--clr-black);
-  padding: 164px 0 37px;
+  padding: 148px 0 37px;
+}
+@media screen and (max-width: 1366px) {
+  .our-events {
+    padding: 120px 0 25px;
+  }
 }
 @media screen and (max-width: 576px) {
   .our-events {
@@ -2555,6 +2710,11 @@ button {
 .our-events__title {
   text-align: center;
   margin-bottom: 93px;
+}
+@media screen and (max-width: 1366px) {
+  .our-events__title {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (max-width: 576px) {
   .our-events__title {
@@ -2636,25 +2796,6 @@ button {
   height: 100%;
   position: relative;
 }
-.our-events__img::after {
-  content: "Photography";
-  font-size: 20px;
-  text-transform: uppercase;
-  position: absolute;
-  left: 58px;
-  bottom: 56px;
-  padding: 12px 0 12px 64px;
-  background-image: url("../img/photography.svg");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-@media screen and (max-width: 576px) {
-  .our-events__img::after {
-    display: none;
-  }
-}
-
 .our-events__img-elem {
   width: 100%;
   height: 100%;
@@ -2787,6 +2928,11 @@ button {
   text-align: center;
   margin-bottom: 46px;
 }
+@media screen and (max-width: 1366px) {
+  .our-gallery__title {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (max-width: 576px) {
   .our-gallery__title {
     margin-bottom: 35px;
@@ -2802,9 +2948,11 @@ button {
   max-width: 1142px;
   margin: 0 auto 45px;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1366px) {
   .our-gallery__desc {
     font-size: 28px;
+    margin-bottom: 40px;
+    max-width: 854px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -2818,6 +2966,11 @@ button {
   display: block;
   max-width: 295px;
   margin: 0 auto 70px;
+}
+@media screen and (max-width: 1366px) {
+  .our-gallery__btn.btn {
+    max-width: 251px;
+  }
 }
 @media screen and (max-width: 576px) {
   .our-gallery__btn.btn {
@@ -2834,7 +2987,7 @@ button {
 }
 @media screen and (max-width: 992px) {
   .our-gallery__slider {
-    margin-bottom: 14px;
+    margin-bottom: 54px;
   }
 }
 
@@ -2892,13 +3045,23 @@ button {
 }
 @media screen and (max-width: 992px) {
   .our-gallery__slider-top {
-    display: none;
+    position: static;
+    transform: initial;
+    justify-content: center;
   }
 }
 
 .our-gallery__slider-fraction.swiper-pagination-fraction {
   font-size: 20px;
   margin-right: 20px;
+}
+@media screen and (max-width: 992px) {
+  .our-gallery__slider-fraction.swiper-pagination-fraction {
+    margin-top: 14px;
+    margin-right: 0;
+    text-align: center;
+    font-size: 14px;
+  }
 }
 .our-gallery__slider-fraction.swiper-pagination-fraction .swiper-pagination-total {
   color: #BABABA;
@@ -2907,6 +3070,11 @@ button {
 .our-gallery__slider-btns {
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .our-gallery__slider-btns {
+    display: none;
+  }
 }
 
 .our-gallery__slider-btn {
@@ -2928,32 +3096,15 @@ button {
   background-image: url("../img/arrow-next.svg");
 }
 
-@media screen and (max-width: 992px) {
-  .our-gallery__slider-pagination {
-    position: static;
-    transform: initial !important;
-    margin: 0 auto 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-.our-gallery__slider-pagination .swiper-pagination-bullet {
-  transform: initial !important;
-  width: 8px;
-  height: 8px;
-  background-color: #4D4D4D;
-  position: static;
-  margin: 0 7px !important;
-}
-.our-gallery__slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: var(--clr-white);
-}
-
 .our-gallery-content {
   max-width: 1400px;
   margin: 0 auto;
   font-size: 20px;
+}
+@media screen and (max-width: 1366px) {
+  .our-gallery-content {
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 576px) {
   .our-gallery-content {
@@ -2974,6 +3125,20 @@ button {
 .our-gallery-content-elem {
   width: calc(50% - 44px);
   margin-left: 44px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1366px) {
+  .our-gallery-content-elem {
+    line-height: 1.44;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .our-gallery-content-elem {
+    line-height: 1.5;
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 992px) {
   .our-gallery-content-elem {
@@ -2997,11 +3162,16 @@ button {
 }
 
 .tabs__item {
-  font-size: 28px;
+  font-size: 26px;
   color: var(--clr-white);
   padding: 15px 28px 14px 28px;
   border: 2px solid transparent;
   transition: 0.2s;
+}
+@media screen and (max-width: 1366px) {
+  .tabs__item {
+    font-size: 22px;
+  }
 }
 
 .tabs__item.active {
