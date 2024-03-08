@@ -256,49 +256,74 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
   <div class="footer">
   <div class="container">
 
-    <div class="footer__letter call-modal-newsletter modal-link" data-modal="modal-newsletter">
-      Join our newsletter
+    <!-- top  -->
+    <div class="footer__top">
+      <!-- info  -->
+      <div class="footer__info">
+        <!-- logo  -->
+        <div class="footer__img">
+          <img src="img/footer-logo.svg" alt="" class="footer__img-elem">
+        </div>
+        <!-- address  -->
+        <div class="footer__address">
+          <div class="footer__address-item">11 Avenue Princesse Grace 98000 Monaco</div>
+          <div class="footer__address-item">e-mail: <a href="mailto:office@gmdesign.pro">office@gmdesign.pro</a></div>
+          <div class="footer__address-item">tel: <a href="tel:+377640617737">+377 6 40 61 77 37</a></div>
+        </div>
+      </div>
+      <!-- socials  -->
+      <ul class="footer__socials socials">
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <svg class="socials__icon" viewBox="0 0 35 35">
+              <use xlink:href="img/icons/sprite.svg#inst"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <svg class="socials__icon" viewBox="0 0 35 35">
+              <use xlink:href="img/icons/sprite.svg#fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <svg class="socials__icon" viewBox="0 0 35 35">
+              <use xlink:href="img/icons/sprite.svg#tt"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <!-- newsletter  -->
+      <div class="footer__letter call-modal-newsletter modal-link" data-modal="modal-newsletter">
+        Join our newsletter
+      </div>
     </div>
 
+    <!-- bottom  -->
     <div class="footer__bottom">
-      <div class="footer__elem">
-        <div class="footer__info">
-          <!-- logo  -->
-          <div class="footer__img">
-            <img src="img/footer-logo.svg" alt="" class="footer__img-elem">
-          </div>
-          <!-- address  -->
-          <div class="footer__address">
-            <div class="footer__address-item">11 Avenue Princesse Grace 98000 Monaco</div>
-            <div class="footer__address-item">e-mail: <a href="mailto:office@gmdesign.pro">office@gmdesign.pro</a></div>
-            <div class="footer__address-item">tel: <a href="tel:+377640617737">+377 6 40 61 77 37</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="footer__elem">
-        <div class="footer__copy">
-          © 2024 G&M Design
-        </div>
-      </div>
-      <div class="footer__elem">
-        <div class="footer__copyright">
-
-          <div class="footer__copyright-item">
-            Design by <a href="https://www.behance.net/Lizart" class="footer__copyright-link" target="_blank">Ilia
-              Liukish</a>
-          </div>
-
-          <div class="footer__copyright-item">
-            Development by <a href="https://incrona.com/" class="footer__copyright-link" target="_blank">Incrona</a>
-          </div>
-
-        </div>
+      <!-- copy  -->
+      <div class="footer__copy">
+        © 2024 G&M Design. <a href="#">Terms and conditions</a>. <a href="#" target="_blank">Privacy Policy</a> & <a
+          href="#" target="_blank">Cookie Policy</a>
       </div>
 
+      <div class="footer__copyright">
+        <div class="footer__copyright-item">
+          Design by <a href="https://www.behance.net/Lizart" class="footer__copyright-link" target="_blank">Ilia
+            Liukish</a>
+        </div>
+        <div class="footer__copyright-item">
+          Development by <a href="https://incrona.com/" class="footer__copyright-link" target="_blank">Incrona</a>
+        </div>
+
+      </div>
     </div>
-
 
   </div>
+
+
   <!-- hotels  -->
   <div class="modal" id="modal-restourant">
     <!-- белая область -->
@@ -403,8 +428,6 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
     </div>
   </div>
 
-
-
   <!-- join our newsletter modal  -->
   <div class="modal " id="modal-newsletter">
     <!-- сама белая область  -->
@@ -441,7 +464,6 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
       </div>
     </div>
   </div>
-
 
   <!-- gallery order modal  -->
   <div class="modal " id="modal-order">
@@ -480,7 +502,6 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
       </div>
     </div>
   </div>
-
 
   <!-- gallery order form modal  -->
   <div class="modal" id="modal-order-form">
@@ -561,7 +582,6 @@ https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css
       </div>
     </div>
   </div>
-
 
   <!-- error order modal  -->
   <div class="modal " id="modal-order-error">
