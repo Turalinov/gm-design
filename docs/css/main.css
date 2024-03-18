@@ -508,11 +508,14 @@ button {
   }
 }
 .btn:hover {
-  border-color: var(--clr-black);
-  background-color: var(--clr-white);
-  color: var(--clr-black);
+  border-color: var(--clr-active);
+  color: var(--clr-active);
 }
 .btn--black {
+  color: var(--clr-black);
+  border: 2px solid var(--clr-black);
+}
+.btn--black:hover {
   color: var(--clr-black);
   border: 2px solid var(--clr-black);
 }
@@ -758,6 +761,15 @@ button {
   }
 }
 
+.design__desc p + p {
+  margin-top: 20px;
+}
+@media screen and (max-width: 576px) {
+  .design__desc p + p {
+    margin-top: 10px;
+  }
+}
+
 .design__pictures {
   display: flex;
   flex-direction: column;
@@ -975,11 +987,46 @@ button {
   height: 102px;
   width: 157px;
   cursor: pointer;
-  opacity: 0.8;
   transition: 0.3s;
+  position: relative;
 }
-.event__picture:hover {
+.event__picture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Используйте rgba для установки прозрачности (0.5 здесь это 50%) */
+  z-index: 1; /* Убедитесь, что подложка находится выше изображения */
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.event__picture::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 22px;
+  background-image: url("../img/eye.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2; /* Убедитесь, что подложка находится выше изображения */
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.event__picture:hover::before, .event__picture:hover::after {
   opacity: 1;
+  visibility: visible;
+}
+.event__picture:hover .our-design__item__title {
+  opacity: 1;
+  visibility: visible;
 }
 
 .event__picture-img {
@@ -1280,7 +1327,6 @@ button {
 
 .footer__top {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 101px;
 }
@@ -1293,6 +1339,34 @@ button {
 @media screen and (max-width: 576px) {
   .footer__top {
     margin-bottom: 55px;
+  }
+}
+
+.footer__top-elem {
+  width: 33.3333333333%;
+  display: flex;
+}
+@media screen and (max-width: 992px) {
+  .footer__top-elem {
+    width: 100%;
+  }
+}
+.footer__top-elem:nth-child(2) {
+  justify-content: center;
+}
+@media screen and (max-width: 992px) {
+  .footer__top-elem:nth-child(2) {
+    justify-content: flex-start;
+    margin-top: 37px;
+  }
+}
+.footer__top-elem:nth-child(3) {
+  justify-content: flex-end;
+}
+@media screen and (max-width: 992px) {
+  .footer__top-elem:nth-child(3) {
+    justify-content: flex-start;
+    margin-top: 26px;
   }
 }
 
@@ -1346,23 +1420,6 @@ button {
   }
 }
 
-@media screen and (max-width: 1366px) {
-  .footer__socials {
-    margin-left: -150px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .footer__socials {
-    margin-left: -50px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .footer__socials {
-    margin-left: 0;
-    margin-top: 37px;
-  }
-}
-
 .footer__letter {
   padding: 14px 17px 13px 50px;
   font-size: 18px;
@@ -1370,11 +1427,7 @@ button {
   cursor: pointer;
   background-color: rgb(47, 47, 47);
   border-radius: 4px;
-}
-@media screen and (max-width: 992px) {
-  .footer__letter {
-    margin-top: 26px;
-  }
+  max-width: 236px;
 }
 .footer__letter::after {
   content: "";
@@ -1607,11 +1660,51 @@ button {
   height: 305px;
   margin-bottom: 24px;
   background-color: var(--clr-black);
+  position: relative;
+  transition: 0.5s;
+}
+.gallery__list-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Используйте rgba для установки прозрачности (0.5 здесь это 50%) */
+  z-index: 1; /* Убедитесь, что подложка находится выше изображения */
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.gallery__list-img::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 22px;
+  background-image: url("../img/eye.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2; /* Убедитесь, что подложка находится выше изображения */
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 @media screen and (max-width: 576px) {
   .gallery__list-img {
     height: 212px;
   }
+}
+.gallery__list-img:hover::before, .gallery__list-img:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.gallery__list-img:hover .our-design__item__title {
+  opacity: 1;
+  visibility: visible;
 }
 
 .gallery__list-img-elem {
@@ -1725,6 +1818,9 @@ button {
     background-color: transparent;
   }
 }
+.header__toggle-wrap:hover .header__toggle::after, .header__toggle-wrap:hover .header__toggle::before {
+  background-color: rgb(122, 122, 122);
+}
 
 .header__toggle {
   position: absolute;
@@ -1829,7 +1925,7 @@ button {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 0;
 }
 @media screen and (max-width: 576px) {
   .hero {
@@ -1879,10 +1975,34 @@ button {
   transform: translateX(-50%);
   width: 60px;
   height: 90px;
-  background-image: url("../img/hero-btn.svg");
+}
+.hero__btn::after, .hero__btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  transition: 0.5s;
+}
+.hero__btn::before {
+  background-image: url("../img/hero-btn.svg");
+}
+.hero__btn::after {
+  background-image: url("../img/hero-btn.svg");
+  opacity: 0;
+  visibility: hidden;
+}
+.hero__btn:hover::before {
+  opacity: 0;
+  visibility: hidden;
+}
+.hero__btn:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (max-width: 992px) {
   .hero__btn {
@@ -2000,7 +2120,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Используйте rgba для установки прозрачности (0.5 здесь это 50%) */
+  background: rgba(0, 0, 0, 0.4); /* Используйте rgba для установки прозрачности (0.5 здесь это 50%) */
   z-index: 1; /* Убедитесь, что подложка находится выше изображения */
   transition: 0.5s;
   opacity: 0;
@@ -2385,6 +2505,10 @@ button {
   color: var(--clr-white);
   text-decoration: none;
   font-size: 36px;
+  transition: 0.3s;
+}
+.menu__link.active, .menu__link:hover {
+  color: #6F6F6F;
 }
 @media screen and (max-width: 1300px) {
   .menu__link {
@@ -2488,49 +2612,51 @@ button {
   padding: 24px;
 }
 
-#modal-order-form .modal__content {
+#modal-order-form .modal__content, #modal-product-form .modal__content {
   max-width: 544px;
   top: 40px;
   transform: translate(-50%, 0);
 }
 @media screen and (max-width: 576px) {
-  #modal-order-form .modal__content {
+  #modal-order-form .modal__content, #modal-product-form .modal__content {
     max-width: 360px;
   }
 }
-#modal-order-form .modal__inner {
+#modal-order-form .modal__inner, #modal-product-form .modal__inner {
   padding: 24px;
 }
 @media screen and (max-width: 576px) {
-  #modal-order-form .modal__inner {
+  #modal-order-form .modal__inner, #modal-product-form .modal__inner {
     padding: 24px 16px;
   }
 }
-#modal-order-form .modal__title {
+#modal-order-form .modal__title, #modal-product-form .modal__title {
   font-size: 24px;
   margin-bottom: 72px;
   max-width: 439px;
 }
 @media screen and (max-width: 576px) {
-  #modal-order-form .modal__title {
+  #modal-order-form .modal__title, #modal-product-form .modal__title {
     font-size: 22px;
     max-width: 255px;
     margin-bottom: 54px;
   }
 }
 #modal-order-form .form__input::placeholder,
-#modal-order-form .form__textarea::placeholder {
+#modal-order-form .form__textarea::placeholder, #modal-product-form .form__input::placeholder,
+#modal-product-form .form__textarea::placeholder {
   color: #676767;
   opacity: 1; /* Firefox */
 }
 #modal-order-form .form__input::-ms-input-placeholder,
-#modal-order-form .form__textarea::-ms-input-placeholder { /* Edge 12 -18 */
+#modal-order-form .form__textarea::-ms-input-placeholder, #modal-product-form .form__input::-ms-input-placeholder,
+#modal-product-form .form__textarea::-ms-input-placeholder { /* Edge 12 -18 */
   color: #676767;
 }
-#modal-order-form .form__textarea {
+#modal-order-form .form__textarea, #modal-product-form .form__textarea {
   height: 122px;
 }
-#modal-order-form .form__btn {
+#modal-order-form .form__btn, #modal-product-form .form__btn {
   font-size: 28px;
 }
 
@@ -2692,33 +2818,55 @@ button {
 }
 
 .navigation {
+  display: inline-block;
   font-size: 24px;
   color: var(--clr-white);
   text-decoration: none;
   position: relative;
+  transition: 0.5s;
 }
 @media screen and (max-width: 1400px) {
   .navigation {
     font-size: 20px;
   }
 }
-.navigation::after {
+.navigation::before, .navigation::after {
   content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 64px;
   height: 14px;
-  background-image: url("../img/back.svg");
+  left: 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  transition: 0.5s;
 }
 @media screen and (max-width: 1400px) {
-  .navigation::after {
+  .navigation::before, .navigation::after {
     width: 54px;
     height: 12px;
   }
+}
+.navigation::before {
+  background-image: url("../img/back.svg");
+}
+.navigation::after {
+  background-image: url("../img/back-hover.svg");
+  opacity: 0;
+  visibility: hidden;
+}
+.navigation:hover {
+  color: rgb(70, 70, 70);
+}
+.navigation:hover::before {
+  opacity: 0;
+  visibility: hidden;
+}
+.navigation:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .navigation--back {
@@ -2741,9 +2889,24 @@ button {
     padding: 12px 66px 12px 4px;
   }
 }
-.navigation--prev::after {
+.navigation--prev::after, .navigation--prev::before {
+  left: initial;
   right: 0;
   transform: translateY(-50%) rotate(180deg);
+}
+
+.notfound {
+  padding: 200px 0;
+}
+
+.notfound__content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.notfound__title {
+  margin-bottom: 40px;
+  line-height: 1.2;
 }
 
 .order {
@@ -2911,7 +3074,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Используйте rgba для установки прозрачности (0.5 здесь это 50%) */
+  background: rgba(0, 0, 0, 0.4); /* Используйте rgba для установки прозрачности (0.5 здесь это 50%) */
   z-index: 1; /* Убедитесь, что подложка находится выше изображения */
   transition: 0.5s;
   opacity: 0;
@@ -2997,6 +3160,12 @@ button {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .our-events > .container--uniq {
+    margin: 0px;
+  }
+}
+
 .our-events__title {
   text-align: center;
   margin-bottom: 93px;
@@ -3034,7 +3203,6 @@ button {
 }
 @media screen and (max-width: 992px) {
   .our-events__item {
-    border: 1px solid #bbbbbb;
     flex-direction: column;
     height: initial;
   }
@@ -3070,7 +3238,7 @@ button {
 }
 
 .our-events__item-block:nth-child(2) {
-  background-color: #191919;
+  background: rgb(25, 25, 25);
   padding: 48px;
   display: flex;
   flex-direction: column;
@@ -3370,20 +3538,49 @@ button {
 .our-gallery__slider-btn {
   width: 36px;
   height: 36px;
+  position: relative;
+}
+.our-gallery__slider-btn::after, .our-gallery__slider-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  transition: 0.3s;
+  z-index: 1;
+}
+.our-gallery__slider-btn:hover::before {
+  opacity: 0;
+  visibility: hidden;
+}
+.our-gallery__slider-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 .our-gallery__slider-btn.swiper-button-disabled {
   opacity: 0.5;
 }
 
-.our-gallery__slider-btn--prev {
+.our-gallery__slider-btn--prev::before {
   background-image: url("../img/arrow-prev.svg");
 }
+.our-gallery__slider-btn--prev::after {
+  background-image: url("../img/arrow-prev-hover.svg");
+  opacity: 0;
+  visibility: hidden;
+}
 
-.our-gallery__slider-btn--next {
+.our-gallery__slider-btn--next::before {
   background-image: url("../img/arrow-next.svg");
+}
+.our-gallery__slider-btn--next::after {
+  background-image: url("../img/arrow-next-hover.svg");
+  opacity: 0;
+  visibility: hidden;
 }
 
 .our-gallery-content {
@@ -3449,6 +3646,88 @@ button {
   .our-gallery-content-elem + .our-gallery-content-elem {
     margin-top: 30;
   }
+}
+
+.politics {
+  position: relative;
+  padding: 200px 0;
+}
+@media screen and (max-width: 992px) {
+  .politics {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .politics__text {
+    font-size: 14px;
+  }
+}
+
+.politics__text h3 {
+  font-size: 34px;
+}
+@media screen and (max-width: 992px) {
+  .politics__text h3 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .politics__text h3 {
+    font-size: 25px;
+  }
+}
+
+.politics__text h1,
+.politics__text h2,
+.politics__text h3,
+.politics__text h4,
+.politics__text h5,
+.politics__text h6 {
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 992px) {
+  .politics__text p, .politics__text ul, .politics__text a {
+    font-size: 14px;
+  }
+}
+
+.politics__text p {
+  margin-top: 20px;
+}
+@media screen and (max-width: 576px) {
+  .politics__text p {
+    text-align: justify;
+  }
+}
+
+.politics ol {
+  padding: 0;
+}
+
+.politics ul,
+.politics ol {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.politics ul > li {
+  list-style: disc;
+}
+
+.politics ul > li + li,
+.politics ol > li + li {
+  margin-top: 10px;
+}
+
+.politics table {
+  margin: 15px 0;
+  border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+.politics table TD, .politics table TH {
+  padding: 3px; /* Поля вокруг содержимого таблицы */
+  border: 1px solid black; /* Параметры рамки */
 }
 
 .product {
@@ -3715,11 +3994,35 @@ button {
   width: 34px;
   height: 34px;
   transition: 0.3s;
+  cursor: pointer;
+  position: relative;
 }
 
-.socials__icon {
+.socials__item {
   width: 34px;
   height: 34px;
+  position: relative;
+}
+.socials__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+.socials__item--insta {
+  background-image: url("../img/inst.svg");
+}
+.socials__item--fb {
+  background-image: url("../img/fb.svg");
+}
+.socials__item--tiktok {
+  background-image: url("../img/tt.svg");
 }
 
 .tabs__item {
@@ -3732,6 +4035,11 @@ button {
 @media screen and (max-width: 1366px) {
   .tabs__item {
     font-size: 22px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .tabs__item {
+    font-size: 18px;
   }
 }
 
